@@ -1,0 +1,42 @@
+﻿@model IEnumerable<Book>
+@{
+    ViewData["Title"] = "List_Book";
+    Layout = "~/Views/Shared/_LibraryLayout.cshtml";
+}
+
+<table class="table">
+  <thead>
+    <tr>
+      <th scope="col">id</th>
+      <th scope="col">Kitap ismi</th>
+      <th scope="col">Yazar ismi</th>
+      <th scope="col">Yayınevi ismi</th>
+      <th scope="col">Türü</th>
+      <th scope="col">kitabı gör</th>
+       <th scope="col">resim</th>
+      <th scope="col">Düzenle</th>
+      <th scope="col">Sil</th>
+     
+    </tr>
+  </thead>
+  <tbody>
+      @foreach(var i in Model)
+        {
+         <tr>
+          <th scope="row">@i.Book_id</th>
+          <td>@i.Book_name</td>
+          <td>@i.Book_author</td>
+          <td>@i.Book_publisher</td>
+          <td>@i.Book_subject</td>
+          <td><a href="/Library/KitapDetay/@i.Book_id">kitabı gör</a> </td>
+          <td><img src="~/Resimler/@i.Book_resim_yol" style="width:50%;"/></td>
+          <td><a href="~/Library/Edit_Book/@i.Book_id" class = "btn btn-warning">Düzenle</a></td>
+          <td><a href="~/Library/Delete_Book/@i.Book_id" class="btn btn-danger">Sil</a></td>
+
+        </tr> 
+        }
+       
+  </tbody>
+</table>
+
+

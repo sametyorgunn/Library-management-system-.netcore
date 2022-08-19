@@ -1,0 +1,27 @@
+﻿@using Library_Registiration.Models
+@model Publisher
+@{
+    ViewData["Title"] = "YayineviDetay";
+    Layout = "~/Views/Shared/_LibraryLayout.cshtml";
+}
+
+<h1>YayineviDetay</h1>
+
+
+
+<div class="card" style="width: 50%;">
+  <img src="~/Resimler/@Model.Publisher_resim_yol" class="card-img-top" alt="...">
+  <div class="card-body">
+    <h5 class="card-title">yayınevi adı : @Model.Publisher_name</h5>
+    <p class="card-text">yayınevi hakkında: @Model.Publisher_About</p>
+  </div>
+  <ul class="list-group list-group-flush">
+    <li class="list-group-item">yayınevi mail : @Model.Publisher_Mail</li>
+   @* <li class="list-group-item">A second item</li>
+    <li class="list-group-item">A third item</li>*@
+  </ul>
+ @* <div class="card-body">
+    <a href="#" class="card-link">Card link</a>
+    <a href="#" class="card-link">Another link</a>
+  </div>*@
+</div>

@@ -1,0 +1,28 @@
+﻿@using Library_Registiration.Models
+@model Author
+@{
+    ViewData["Title"] = "YazarDetay";
+    Layout = "~/Views/Shared/_LibraryLayout.cshtml";
+}
+
+<h1>YazarDetay</h1>
+
+
+
+
+<div class="card" style="width:50%; ">         @*18rem;*@
+  <img src="~/Resimler/@Model.Author_resim_yol" class="card-img-top" alt="...">
+  <div class="card-body">
+    <h5 class="card-title">yazar isim : @Model.Author_name</h5>
+    <p class="card-text">yazar hakkında : @Model.Author_about</p>
+  </div>
+  <ul class="list-group list-group-flush">
+    <li class="list-group-item">yazar yaşı : @Model.Author_age</li>
+@*    <li class="list-group-item">@Model.aut</li>
+*@@*    <li class="list-group-item">A third item</li>
+*@  </ul>
+ @* <div class="card-body">
+    <a href="#" class="card-link">Card link</a>
+    <a href="#" class="card-link">Another link</a>
+  </div>*@
+</div>

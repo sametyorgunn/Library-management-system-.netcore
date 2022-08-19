@@ -1,0 +1,81 @@
+﻿@model Publisher
+@{
+    ViewData["Title"] = "Edit_Publisher";
+    Layout = "~/Views/Shared/_LibraryLayout.cshtml";
+}
+
+
+<form method="post" enctype="multipart/form-data">
+
+    <div class="form-group">
+        <label for="exampleFormControlInput1">id</label>
+        <input type="text" name="Publisher_id" value="@Model.Publisher_id" class="form-control" id="exampleFormControlInput1" placeholder="">
+        <span asp-validation-for="Publisher_name" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label for="exampleFormControlInput1">Yayınevi adı</label>
+        <input type="text" name="Publisher_name" value="@Model.Publisher_name" class="form-control" id="exampleFormControlInput1" placeholder="">
+        <span asp-validation-for="Publisher_name" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <label for="exampleFormControlInput1">Yayınevi Mail</label>
+        <input type="email" name="Publisher_Mail" value="@Model.Publisher_Mail" class="form-control" id="exampleFormControlInput1" placeholder="">
+        <span asp-validation-for="Publisher_Mail" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <label for="exampleFormControlInput1">Yayınevi hakkında</label>
+        <input type="text" name="Publisher_About" value="@Model.Publisher_About" class="form-control" id="exampleFormControlInput1" placeholder="">
+        <span asp-validation-for="Publisher_About" class="text-danger"></span>
+    </div>
+     <div class="mb-3">
+        <label for="formFile" class="form-label"> resim</label>
+        <input class="form-control" name="publisher_Resim" type="file" id="formFile" required>
+    </div>
+    
+    <br>
+    <button type="submit" class="btn btn-primary">Güncelle</button>
+</form>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@*@using (Html.BeginForm("Edit_Publisher","Library", FormMethod.Post))
+{
+    @Html.Label("Publisher id")
+    @Html.TextBoxFor(x=>x.Publisher_id, new{Class="form-control",@readonly="readonly"})
+    <br />
+
+    @Html.Label("Publisher name")
+    @Html.TextBoxFor(x=>x.Publisher_name, new{Class="form-control"})
+    <br />
+
+    @Html.Label("Publisher Mail")
+    @Html.TextBoxFor(x=>x.Publisher_Mail, new{Class="form-control"})
+    <br />
+
+    @Html.Label("Publisher About")
+    @Html.TextBoxFor(x=>x.Publisher_About, new{Class="form-control"})
+    <br />
+   
+    <button type="submit" class="btn-primary ">Güncelle</button>
+}
+*@
+

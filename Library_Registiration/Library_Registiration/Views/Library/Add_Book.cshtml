@@ -1,0 +1,39 @@
+﻿@model Book
+@{
+    ViewData["Title"] = "Add_Book";
+    Layout = "~/Views/Shared/_LibraryLayout.cshtml";
+}
+
+<form method="post" enctype="multipart/form-data">
+
+    <div class="form-group">
+        <label for="exampleFormControlInput1">kitap adı</label>
+        <input type="text" name="Book_Name" class="form-control" id="exampleFormControlInput1" placeholder="">
+        <span asp-validation-for="Book_name" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <label for="exampleFormControlInput1">yazar adı</label>
+        <input type="text" name="Book_author" class="form-control" id="exampleFormControlInput1" placeholder="">
+        <span asp-validation-for="Book_author" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <label for="exampleFormControlInput1">yayınevi adı</label>
+        <input type="text" name="Book_publisher" class="form-control" id="exampleFormControlInput1" placeholder="">
+        <span asp-validation-for="Book_publisher" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <label for="exampleFormControlTextarea1">Konusu</label>
+        <input class="form-control" name="Book_subject" id="exampleFormControlTextarea1" rows="4"/>
+        <span asp-validation-for="Book_subject" class="text-danger"></span>
+    </div>
+    <div class="mb-3">
+        <label for="formFile" class="form-label"> resim ekle</label>
+        <input class="form-control" name="Book_resim" type="file" id="formFile">
+    </div>
+    <br>
+    <button type="submit" class="btn btn-primary">Kaydet</button>
+</form>
+

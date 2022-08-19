@@ -1,0 +1,26 @@
+﻿@using Library_Registiration.Models
+@model Book
+@{
+    ViewData["Title"] = "KitapDetay";
+    Layout = "~/Views/Shared/_LibraryLayout.cshtml";
+}
+
+<h1>KitapDetay</h1>
+
+
+<div class="card" style="width:50%; ">         @*18rem;*@
+  <img src="~/Resimler/@Model.Book_resim_yol" class="card-img-top" alt="...">
+  <div class="card-body">
+    <h5 class="card-title">kitap adı : @Model.Book_name</h5>
+    <p class="card-text">kitap yazar : @Model.Book_author</p>
+  </div>
+  <ul class="list-group list-group-flush">
+    <li class="list-group-item">kitap yayınevi : @Model.Book_publisher</li>
+    <li class="list-group-item">kitap konusu : @Model.Book_subject</li>
+@*    <li class="list-group-item">A third item</li>
+*@  </ul>
+ @* <div class="card-body">
+    <a href="#" class="card-link">Card link</a>
+    <a href="#" class="card-link">Another link</a>
+  </div>*@
+</div>

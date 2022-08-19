@@ -1,0 +1,145 @@
+﻿@model Book
+@{
+    ViewData["Title"] = "Edit_Book";
+    Layout = "~/Views/Shared/_LibraryLayout.cshtml";
+}
+
+<form method="post" enctype="multipart/form-data">
+
+     <div hidden class="form-group">
+        <label for="exampleFormControlInput1">kitap id</label>
+        <input type="text" name="Book_id" class="form-control" value="@Model.Book_id" id="exampleFormControlInput1" placeholder="">
+@*        <span asp-validation-for="Book_name" class="text-danger"></span>
+*@    </div>
+    <div class="form-group">
+        <label for="exampleFormControlInput1">kitap adı</label>
+        <input type="text" name="Book_Name" value="@Model.Book_name" class="form-control" id="exampleFormControlInput1" placeholder="">
+        <span asp-validation-for="Book_name" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <label for="exampleFormControlInput1">yazar adı</label>
+        <input type="text" name="Book_author" value="@Model.Book_author" class="form-control" id="exampleFormControlInput1" placeholder="">
+        <span asp-validation-for="Book_author" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <label for="exampleFormControlInput1">yayınevi adı</label>
+        <input type="text" name="Book_publisher" value="@Model.Book_publisher" class="form-control" id="exampleFormControlInput1" placeholder="">
+        <span asp-validation-for="Book_publisher" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <label for="exampleFormControlTextarea1">konusu</label>
+        <input class="form-control" name="Book_subject" value="@Model.Book_subject" id="exampleFormControlTextarea1" rows="4" />
+        <span asp-validation-for="Book_subject" class="text-danger"></span>
+    </div>
+    <div class="mb-3">
+        <label for="formFile" class="form-label"> resim ekle</label>
+        <input class="form-control" name="Book_resim" type="file" id="formFile" required>
+    </div>
+    <br>
+    <button type="submit" class="btn btn-primary">Kaydet</button>
+</form>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@*
+@using (Html.BeginForm("Edit_Book","Library", FormMethod.Post))
+{
+    @Html.Label("Book id")
+    @Html.TextBoxFor(x=>x.Book_id, new{Class="form-control",@readonly="readonly"})
+    <br />
+
+    @Html.Label("Book name")
+    @Html.TextBoxFor(x=>x.Book_name, new{Class="form-control"})
+    <br />
+
+    @Html.Label("Book Author")
+    @Html.TextBoxFor(x=>x.Book_author, new{Class="form-control"})
+    <br />
+
+    @Html.Label("Book Publisher")
+    @Html.TextBoxFor(x=>x.Book_publisher, new{Class="form-control"})
+    <br />
+    @Html.Label("Type")
+    @Html.TextAreaFor(x=>x.Book_subject,10,3, new{Class="form-control"})
+    <br />
+    @Html.Label("Reism")
+    @Html.TextBoxFor(x=>x.Book_resim)
+    <button type="submit" class="btn-primary ">Güncelle</button>
+}
+
+
+*@
+
+
+
+
+
+
+
+
+@* <form>
+                  <div class="form-group">
+                    <label for="exampleFormControlInput1">Kitap Adı</label>
+                    <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="">
+                  </div>
+
+                  <div class="form-group">
+                    <label for="exampleFormControlInput1">Yazar Adı</label>
+                    <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="">
+                  </div>
+
+                  <div class="form-group">
+                    <label for="exampleFormControlInput1">Deneme...</label>
+                    <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="">
+                  </div>
+                 
+                  <div class="form-group">
+                    <label for="exampleFormControlTextarea1">Kitap Konusu</label>
+                    <textarea class="form-control" id="exampleFormControlTextarea1" rows="4"></textarea>
+                  </div>
+                  <br>
+                  <button type="button" class="btn btn-primary">Güncelle</button>
+               </form>*@
+
+

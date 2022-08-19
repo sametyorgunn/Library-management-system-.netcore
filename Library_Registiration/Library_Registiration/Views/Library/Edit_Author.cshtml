@@ -1,0 +1,79 @@
+﻿@model Author
+@{
+    ViewData["Title"] = "Edit_Author";
+    Layout = "~/Views/Shared/_LibraryLayout.cshtml";
+}
+
+
+
+<form method="post" enctype="multipart/form-data">
+
+     <div class="form-group">
+        <label for="exampleFormControlInput1"> id</label>
+        <input type="text" name="Author_id" value="@Model.Author_id" class="form-control" id="exampleFormControlInput1" placeholder="">
+        <span asp-validation-for="Author_name" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label for="exampleFormControlInput1">Yazar adı</label>
+        <input type="text" name="Author_name" value="@Model.Author_name" class="form-control" id="exampleFormControlInput1" placeholder="">
+        <span asp-validation-for="Author_name" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <label for="exampleFormControlInput1">Yazar Yaş</label>
+        <input type="text" name="Author_age" value="@Model.Author_age" class="form-control" id="exampleFormControlInput1" placeholder="">
+        <span asp-validation-for="Author_age" class="text-danger"></span>
+    </div>
+
+   
+
+    <div class="form-group">
+        <label for="exampleFormControlTextarea1">Yazar Hakkında</label>
+        <input class="form-control" name="Author_about" value="@Model.Author_about" id="exampleFormControlTextarea1" rows="4"/>
+        <span asp-validation-for="Author_about" class="text-danger"></span>
+    </div>
+     <div class="mb-3">
+        <label for="formFile" class="form-label">Default file input example</label>
+        <input class="form-control" name="Author_resim" type="file" id="formFile" required>
+    </div>
+    <br>
+    <button type="submit" class="btn btn-primary">Güncelle</button>
+</form>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@*@using (Html.BeginForm("Edit_Author","Library", FormMethod.Post))
+{
+    @Html.Label("Author id")
+    @Html.TextBoxFor(x=>x.Author_id, new{Class="form-control",@readonly="readonly"})
+    <br />
+
+    @Html.Label("Author name")
+    @Html.TextBoxFor(x=>x.Author_name, new{Class="form-control"})
+    <br />
+
+    @Html.Label("Author Age")
+    @Html.TextBoxFor(x=>x.Author_age, new{Class="form-control"})
+    <br />
+
+    @Html.Label("Author About")
+    @Html.TextBoxFor(x=>x.Author_about, new{Class="form-control"})
+    <br />
+   
+    <button type="submit" class="btn-primary ">Güncelle</button>
+}*@
+
+

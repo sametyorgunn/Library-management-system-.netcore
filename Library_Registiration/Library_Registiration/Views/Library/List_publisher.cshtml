@@ -1,0 +1,41 @@
+﻿@model IEnumerable<Publisher>
+@{
+    ViewData["Title"] = "List_publisher";
+    Layout = "~/Views/Shared/_LibraryLayout.cshtml";
+}
+
+<table class="table">
+  <thead>
+    <tr>
+      <th scope="col">id</th>
+      <th scope="col">Yayınevi ismi</th>
+      <th scope="col">Yayınevi mail</th>
+      <th scope="col">Yayınevi hakkında</th>
+      <th scope="col">Resim</th>
+      <th scope="col">Yayınevini gör</th>
+      <th scope="col">Düzenle</th>
+      <th scope="col">Sil</th>
+      
+
+    </tr>
+  </thead>
+  <tbody>
+      @foreach(var i in Model)
+        {
+         <tr>
+          <th scope="row">@i.Publisher_id</th>
+          <td>@i.Publisher_name</td>
+          <td>@i.Publisher_Mail</td>
+          <td>@i.Publisher_About</td>
+          <td><img src="~/Resimler/@i.Publisher_resim_yol" style="width:50%;"/></td>
+            <td><a href="/Library/YayineviDetay/@i.Publisher_id">YayınEvini Gör</a></td>
+          <td><a href="~/Library/Edit_Publisher/@i.Publisher_id" class = "btn btn-warning">Düzenle</a></td>
+          <td><a href="~/Library/Delete_Publisher/@i.Publisher_id" class="btn btn-danger">Sil</a></td>
+        
+        </tr> 
+        }
+       
+  </tbody>
+</table>
+
+
